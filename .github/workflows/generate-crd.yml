@@ -16,8 +16,8 @@ on:
         description: 'The prefix of the target CRDs api group to generate. (Optional)'
 
 env:
-  IMAGE_NAME: ghcr.io/kubernetes-client/java/crd-model-gen
-  IMAGE_TAG: v1.0.6
+  IMAGE_NAME: ghcr.io/dawiki/kubernetes-java/crd-model-gen
+  IMAGE_TAG: gh-action-tmp
   GEN_DIR: crd-gen
 
 permissions:
