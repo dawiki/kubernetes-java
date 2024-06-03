@@ -146,13 +146,13 @@ jobs:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
-          name: kubernetes-client/java/crd-model-gen
+          name: dawiki/kubernetes-java/crd-model-gen
           tags: gh-action-tmp
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
           workdir: client-java-contrib
-          no_push: true
+          no_push: false
       - name: Run Code-gen for Cert-Manager
         working-directory: ${{ github.workspace }}/client-java-contrib/cert-manager
         run: IMAGE_TAG=gh-action-tmp ./update.sh
